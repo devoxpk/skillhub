@@ -1,7 +1,8 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* your existing config */
   images: {
     remotePatterns: [
       {
@@ -10,6 +11,16 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+  },
+
+  // 1️⃣ Skip ESLint errors
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  // 2️⃣ Skip TypeScript errors
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 

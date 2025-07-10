@@ -1,10 +1,14 @@
 'use client';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+          
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Role } from '../auth/types';
 import { useAuth } from '../auth/AuthContext';
+
 
 export default function SignupPage() {
   const [email, setEmail] = useState('');

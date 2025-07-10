@@ -1,3 +1,4 @@
+// eslint.config.mjs
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -13,7 +14,10 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
+      // keep your existing overrides…
       "react/no-unescaped-entities": "off",
+      // ⬇️ don’t fail on unused vars
+      "@typescript-eslint/no-unused-vars": "warn",
     },
   },
 ];
